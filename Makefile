@@ -1,9 +1,12 @@
 sources := $(wildcard src/*.md)
 
-all: VAE.pdf
+all: build/VAE.pdf
 
 run: all
-	evince VAE.pdf
+	evince build/VAE.pdf
 
-VAE.pdf: $(sources)
+build:
+	mkdir -p $@
+
+build/VAE.pdf: $(sources) | build
 	pandoc -s --toc -o $@ $^
