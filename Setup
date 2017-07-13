@@ -1,9 +1,11 @@
 #!/usr/bin/setup
-Setup.use Pkg
-
-declare -a sources=( src/*.md )
-prepare .build/VAE.pdf = VAE.build "${sources[@]}"
-Pkg.package Pkg.files usr/share/doc/VAE/VAE.pdf=.build/VAE.pdf
+if Setup.params -package; then
+    Setup.use Pkg
+    
+    declare -a sources=( src/*.md )
+    prepare .build/VAE.pdf = VAE.build "${sources[@]}"
+    Pkg.package Pkg.files usr/share/doc/VAE/VAE.pdf=.build/VAE.pdf
+fi
 
 function VAE.build() { mkpdir "$1"; pandoc -s --toc -o "$1" "${@:2}"; }
 
