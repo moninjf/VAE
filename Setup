@@ -1,9 +1,9 @@
 #!/usr/bin/setup
+declare -a sources=( src/*.md )
+prepare .build/VAE.pdf = VAE.build "${sources[@]}"
+
 if Setup.params -package; then
     Setup.use Pkg
-    
-    declare -a sources=( src/*.md )
-    prepare .build/VAE.pdf = VAE.build "${sources[@]}"
     Pkg.package Pkg.files usr/share/doc/VAE/VAE.pdf=.build/VAE.pdf
 fi
 
