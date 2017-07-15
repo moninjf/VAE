@@ -8,8 +8,8 @@ d'infrastructures, de la mise en place de machines virtuelles à usage
 unique pour un TP à la configuration d'un système de déploiement
 d'images disques par le réseau dans nos salles de TP.
 
-Dans ce chapitre, je décrirai en détail quelques unes de ces activités,
-et ce que j'en ai appris.
+Dans ce chapitre, je décrirai en détail quelques unes de ces
+activités.
 
 ### Un système de déploiements d'images en PXE
 
@@ -91,7 +91,10 @@ qui permet ce comportement :
         ocs_live_run=ocs-live-restore
         ocs_live_extra_param="-scr -p reboot restoredisk CHEMIN-IMAGE DISQUE"
 
-En conclusion, la mise en place d'un serveur de déploiement nécessite
-des compétences diverses d'installation et de configuration de
-protocoles qui oeuvrent sur le réseau, ainsi qu'une connaissance
+En conclusion, la mise en place d'une infrastructure de déploiement
+nécessite des compétences diverses d'installation et de configuration
+de protocoles qui oeuvrent sur le réseau, ainsi qu'une connaissance
 poussée des systèmes d'exploitation que l'on démarre.
+
+### Un serveur de paquets pour des installations différées
+
