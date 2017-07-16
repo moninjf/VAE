@@ -17,7 +17,7 @@ résoudre. En raison de la nature informatique des enseignements qui y
 sont dispensés, les éxigences des utilisateurs sont bien plus précises
 que pour la majorité des postes similaires dans d'autres UFR. En
 particulier, les enseignants peuvent nous demander de paramétrer une
-infrastructure en place pour leurs TPs. C'est le cas par exemple pour
+infrastructure pour leurs TPs. C'est le cas par exemple pour
 les TPs de réseau et de cryptographie, qui sont isolés sur des réseaux
 dédiés et disposent de leurs propres services d'infrastructure pour
 mitiger les risques de sécurité.
