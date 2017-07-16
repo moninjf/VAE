@@ -42,7 +42,7 @@ serveur. Dans notre cas, ce protocole sert à démarrer un système
 spécialisé dans le clonage d'images disques, du nom de CloneZilla,
 auquel on demande de restaurer une image commune sur chaque poste de
 notre réseau. Cette image commune doit au préalable être extraite d'un
-poste d'example, appelé le "master", que l'on peut configurer à notre
+poste d'exemple, appelé le "master", que l'on peut configurer à notre
 guise avant l'extraction.
 
 Bien que conceptuellement simple, le PXE n'est pas un protocole très
@@ -77,7 +77,7 @@ branché que sur un seul poste).
 
 [^nfs]: Network File System, ou "système de fichiers en réseau". Ce
 protocole permet le partage de dossiers entre machines, et permet à
-plusieurs client d'accéder aux mêmes donnée sans nécessiter de copie.
+plusieurs client d'accéder aux mêmes données sans nécessiter de copie.
 
 CloneZilla étant conçu comme un système de rescousse, il va par défaut
 poser quelques questions à l'administrateur lors de son démarrage pour
@@ -85,7 +85,7 @@ déterminer la marche à suivre. Dans un contexte de déploiement, les
 réponses à ces questions sont prédéterminées et doivent être
 directement communiquées à CloneZilla, de manière à éviter de fournir
 16 fois les mêmes informations (et l'erreur humaine qui
-s'ensuit). Voici un example de la configuration du chargeur d'amorçage
+s'ensuit). Voici un exemple de la configuration du chargeur d'amorçage
 qui permet ce comportement :
 
     default clone
@@ -101,6 +101,9 @@ qui permet ce comportement :
         ocs_live_batch=yes ocs_prerun1="mount -t nfs SERVEUR_NFS:CHEMIN_RACINE /home/partimag"
         ocs_live_run=ocs-live-restore
         ocs_live_extra_param="-scr -p reboot restoredisk CHEMIN-IMAGE DISQUE"
+
+
+
 
 En conclusion, la mise en place d'une infrastructure de déploiement a
 nécessité le développement de compétences diverses d'installation et
