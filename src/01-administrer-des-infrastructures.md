@@ -85,8 +85,9 @@ pour décider des actions à effectuer. Dans un contexte de déploiement,
 les réponses à ces questions sont prédéterminées et doivent être
 directement communiquées à CloneZilla, de manière à éviter de fournir
 16 fois les mêmes informations (et l'erreur humaine qui en
-découle). Voici un exemple de la configuration du chargeur d'amorçage
-qui permet ce comportement :
+découle). Après quelques jours de recherche, j'ai pu arriver à la
+configuration suivante pour le chargeur d'amorçage, qui permet un
+déploiement entièrement automatique du démarrage à l'extinction :
 
     default clone
     label clone
@@ -103,9 +104,9 @@ qui permet ce comportement :
         ocs_live_extra_param="-scr -p reboot restoredisk CHEMIN-IMAGE DISQUE"
 
 
-
 En résumé, la mise en place d'une infrastructure de déploiement a
 nécessité l'acquisition et la mise en oeuvre de compétences diverses
 d'installation et de configuration de services qui oeuvrent sur le
-réseau. 
+réseau, et une capacité d'orchestration de ces services en un ensemble
+harmonieux.
 
