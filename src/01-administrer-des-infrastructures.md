@@ -102,10 +102,10 @@ qui permet ce comportement :
         ocs_live_run=ocs-live-restore
         ocs_live_extra_param="-scr -p reboot restoredisk CHEMIN-IMAGE DISQUE"
 
-En conclusion, la mise en place d'une infrastructure de déploiement
-nécessite des compétences diverses d'installation et de configuration
-de protocoles qui oeuvrent sur le réseau, ainsi qu'une connaissance
-poussée des systèmes d'exploitation que l'on démarre.
+En conclusion, la mise en place d'une infrastructure de déploiement a
+nécessité le développement de compétences diverses d'installation et
+de configuration de services qui oeuvrent sur le réseau, ainsi qu'une
+connaissance poussée des systèmes d'exploitation que l'on démarre.
 
 Un serveur de paquets pour des installations différées
 ------------------------------------------------
