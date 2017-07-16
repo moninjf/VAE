@@ -214,9 +214,9 @@ Cette méthode fonctionne parfaitement sur des serveurs, qui sont
 perpétuellement allumés, mais risque de ne pas être suffisante pour
 les installations en salle machine. En effet, au moment de
 l'installation, les postes peuvent être éteints, ou (comme nous
-offrons un double boot) démarrés sur un autres système. Ces postes ne
-peuvent pas récupérer la mise à jour immédiatement, mais il faudrait
-qu'ils la récupèrent lors de leur prochain redémarrage, ou
+offrons un double boot à l'UFR) démarrés sur un autres système. Ces
+postes ne peuvent pas récupérer la mise à jour immédiatement, mais il
+faudrait qu'ils la récupèrent lors de leur prochain redémarrage, ou
 silencieusement au fil de leur utilisation.
 
 Pour celà, j'ai choisi de représenter les installations comme des
