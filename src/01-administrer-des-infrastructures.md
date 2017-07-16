@@ -80,12 +80,12 @@ protocole permet le partage de dossiers entre machines, et permet à
 plusieurs client d'accéder aux mêmes données sans nécessiter de copie.
 
 CloneZilla étant conçu comme un système de rescousse, il va par défaut
-poser quelques questions à l'administrateur lors de son démarrage pour
-déterminer la marche à suivre. Dans un contexte de déploiement, les
-réponses à ces questions sont prédéterminées et doivent être
+poser quelques questions à l'administrateur au moment du démarrage
+pour décider des actions à effectuer. Dans un contexte de déploiement,
+les réponses à ces questions sont prédéterminées et doivent être
 directement communiquées à CloneZilla, de manière à éviter de fournir
-16 fois les mêmes informations (et l'erreur humaine qui
-s'ensuit). Voici un exemple de la configuration du chargeur d'amorçage
+16 fois les mêmes informations (et l'erreur humaine qui en
+découle). Voici un exemple de la configuration du chargeur d'amorçage
 qui permet ce comportement :
 
     default clone
@@ -104,11 +104,10 @@ qui permet ce comportement :
 
 
 
-
-En conclusion, la mise en place d'une infrastructure de déploiement a
-nécessité le développement de compétences diverses d'installation et
-de configuration de services qui oeuvrent sur le réseau, ainsi qu'une
-connaissance poussée des systèmes d'exploitation que l'on démarre.
+En résumé, la mise en place d'une infrastructure de déploiement a
+nécessité l'acquisition et la mise en oeuvre de compétences diverses
+d'installation et de configuration de services qui oeuvrent sur le
+réseau. 
 
 Un serveur de paquets pour des installations différées
 ------------------------------------------------
