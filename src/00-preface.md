@@ -34,14 +34,16 @@ rendu (en plus d'être plutôt sympathique, pour être honnête).
 
 Un ingénieur RICM doit être faire preuve de proficience dans les
 domaines informatiques liés à l'administration de systèmes
-d'information, et au traitement de l'information. Il doit également
-savoir développer et intégrer des briques logicielles, et être à
-l'aise dans toutes les étapes du cycle de vie d'un projet
-logiciel. Enfin, il est souhaitable qu'il demeure curieux et
-entretienne sa capacité à intégrer de nouvelles compétences à son
+d'information, et au traitement de l'information au sein de ces
+systèmes. Il doit également savoir développer et intégrer des briques
+logicielles, et être à l'aise dans toutes les étapes du cycle de vie
+d'un projet logiciel. Enfin, il est souhaitable qu'il demeure curieux
+et entretienne sa capacité à intégrer de nouvelles compétences à son
 arsenal, en pratiquant ce qu'on appelle parfois l'innovation continue.
 
-Ce rapport se découpera donc en cinq chapitres, correspondant 
+Ce rapport se découpera donc en cinq chapitres, chacun identifiant le
+lien entre une de ces qualités et mon activité personnelle et
+professionnelle au cours des quatre dernières années.
 
 [^ricm]: RICM : Réseaux Informatiques et Communication Multimédia
 [^ufrimag]: UFR IM²AG: Unité de Formation et de Recherche en
