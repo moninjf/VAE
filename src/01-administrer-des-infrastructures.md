@@ -2,13 +2,19 @@
 Administrer et configurer des infrastructures informatiques
 ======================
 
-En quatre années à travailler comme administrateur système à l'UFR
-IM²AG, j'ai été confronté à de nombreuses demandes d'administration
-d'infrastructures, de la mise en place de machines virtuelles à usage
-unique pour un TP à la configuration d'un système de déploiement
-d'images disques par le réseau dans nos salles de TP.
+La compétence première d'un ingénieur RICM est bien sûr (comme
+l'indique la première lettre), la capacité à gérer des infrastructures
+informatiques mises en réseau. Cela s'aligne tout à fait avec les
+missions d'un gestionnaire de parc informatique, ce que je vais
+illustrer ci-dessous.
 
-Je commencerai par décrire les éxigences d'un 
+Je commencerai par décrire mon expérience à mettre en place une
+infrastructure de déploiement d'images disques en salles de TP. Dans
+un second temps, je narrerai ma mise en place d'une grappe[^cluster]
+d'hyperviseurs pour héberger nos serveurs.
+
+[^cluster]: une grappe (ou *cluster* en anglais) de serveurs est un
+groupe de machines qui oeuvrent de concert pour offrir un service
 
 Un système de déploiements d'images en PXE
 ------------------------------
@@ -32,7 +38,7 @@ d'étudiants goguenards.
 
 Afin d'éviter ces situations délicates, et de faciliter le travail des
 techniciens, j'ai mis en place, au cours de l'été 2013, un système qui
-permet l'installation parallèle des machines d'une salle, avec une
+permet l'installation simultanée des machines d'une salle, avec une
 garantie d'uniformité des installations.
 
 Le PXE (Preboot eXecution Environment, en anglais dans le texte) est
