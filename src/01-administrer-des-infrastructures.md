@@ -38,11 +38,12 @@ garantie d'uniformité des installations.
 Le PXE (Preboot eXecution Environment, en anglais dans le texte) est
 un protocole réseau, ou plutôt un ensemble de protocoles réseaux, qui
 permet à des machines de démarrer un système fourni par un
-serveur. Dans notre cas, ce protocole sert à démarrer un système de
-clonage d'images disques, du nom de CloneZilla, auquel on demande de
-restaurer une image commune sur chaque poste de notre réseau. Cette
-image commune doit au préalable être extraite d'un poste d'example
-,appelé le "master", que l'on peut configurer à notre guise.
+serveur. Dans notre cas, ce protocole sert à démarrer un système
+spécialisé dans le clonage d'images disques, du nom de CloneZilla,
+auquel on demande de restaurer une image commune sur chaque poste de
+notre réseau. Cette image commune doit au préalable être extraite d'un
+poste d'example, appelé le "master", que l'on peut configurer à notre
+guise avant l'extraction.
 
 Bien que conceptuellement simple, le PXE n'est pas un protocole très
 facile à mettre en place. En particulier, il nécessite dans un premier
