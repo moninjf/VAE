@@ -8,8 +8,7 @@ d'infrastructures, de la mise en place de machines virtuelles à usage
 unique pour un TP à la configuration d'un système de déploiement
 d'images disques par le réseau dans nos salles de TP.
 
-Dans ce chapitre, je décrirai en détail quelques unes de ces
-activités.
+Je commencerai par décrire les éxigences d'un 
 
 Un système de déploiements d'images en PXE
 ------------------------------
@@ -32,9 +31,9 @@ sous peine de se retrouver fort dépourvu le jour J face à une classe
 d'étudiants goguenards.
 
 Afin d'éviter ces situations délicates, et de faciliter le travail des
-techniciens, il nous a fallu mettre en place un système qui permettait
-l'installation parallèle des machines d'une salle, doublée d'une
-garantie d'uniformité des installations.
+techniciens, j'ai mis en place, au cours de l'été 2013, un système qui
+permet l'installation parallèle des machines d'une salle, doublée
+d'une garantie d'uniformité des installations.
 
 Le PXE (Preboot eXecution Environment, en anglais dans le texte) est
 un protocole réseau, voire même un ensemble de protocoles réseaux, qui
@@ -68,8 +67,7 @@ récupérer l'image du bootloader.
 Dans notre cas, et comme indiqué ci-dessus, le système à démarrer est
 CloneZilla, qui est capable de sauvegarder et de restaurer des images
 disques à partir de diverses solutions de stockage (un disque de
-sauvegarde, ou un lecteur réseau, par exemple). Pour nos usages, nous
-avons choisi de garder nos images disques sur un serveur NFS[^nfs]
+sauvegarde, ou un lecteur réseau, par exemple). Pour les usages de l'UFR, j'ai choisi de garder nos images disques sur un serveur NFS[^nfs]
 fourni par notre baie de stockage, de façon à ce que la même image
 puisse être déployée sur plusieurs postes simultanément (ce qui est
 difficile si l'image se trouve sur un disque qui ne peut être branché
@@ -148,7 +146,7 @@ pour accomoder de nouveaux besoins, et imposer de nouvelles
 dépendances.
 
 Dans l'écosystème Linux, il existe déjà des dépôts de paquets qui
-fournissent une grande partie des applications dont nous avons
+fournissent une grande partie des applications dont l'UFR a
 besoin. Malheureusement, certaines applications ne sont pas librement
 accessible à tout public (pour raisons légales ou commerciales), et
 doivent être paramétrées localement. Pour celà, il nous faut ajouter
@@ -157,14 +155,14 @@ installations qui ne sont pas disponibles ailleurs.
 
 Par chance, la majorité de nos systèmes Linux est composée de dérivés
 de Debian, qui utilisent tous le même gestionnaire de
-paquets[^dpkg]. Celà nous évite de gérer plusieurs systèmes de paquets,
-qui ont chacun leur structure et leurs particularités. Nous pouvons
-donc nous concentrer sur la construction et le déploiement de paquets
-au format `.deb`.
+paquets[^dpkg]. Celà m'a évité de gérer plusieurs systèmes de paquets,
+qui ont chacun leur structure et leurs particularités. J'ai donc pu me
+concentrer sur la construction et le déploiement de paquets au format
+`.deb`.
 
 ### Hébergement et structure du dépôt
 
-L'hébergement d'un dépôt n'est pas difficile à mettre en
+L'hébergement d'un dépôt Debian n'est pas difficile à mettre en
 oeuvre. `apt-get`[^apt-get] est capable de récupérer ses paquets sur un
 serveur HTTP, donc l'hébergement peut consister en un simple serveur
 Apache[^apache] qui dessert un répertoire statique dont la structure est
