@@ -68,11 +68,12 @@ récupérer l'image du bootloader.
 Dans notre cas, et comme indiqué ci-dessus, le système à démarrer est
 CloneZilla, qui est capable de sauvegarder et de restaurer des images
 disques à partir de diverses solutions de stockage (un disque de
-sauvegarde, ou un lecteur réseau, par exemple). Pour les usages de l'UFR, j'ai choisi de garder nos images disques sur un serveur NFS[^nfs]
-fourni par notre baie de stockage, de façon à ce que la même image
-puisse être déployée sur plusieurs postes simultanément (ce qui est
-difficile si l'image se trouve sur un disque qui ne peut être branché
-que sur un seul poste).
+sauvegarde, ou un lecteur réseau, par exemple). Pour les usages de
+l'UFR, j'ai choisi de garder nos images disques sur un serveur
+NFS[^nfs] fourni par notre baie de stockage, de façon à ce que la même
+image puisse être déployée sur plusieurs postes simultanément (ce qui
+est difficile si l'image se trouve sur un disque qui ne peut être
+branché que sur un seul poste).
 
 [^nfs]: Network File System, ou "système de fichiers en réseau". Ce
 protocole permet le partage de dossiers entre machines, et permet à
