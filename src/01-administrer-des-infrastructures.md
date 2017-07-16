@@ -32,8 +32,8 @@ d'étudiants goguenards.
 
 Afin d'éviter ces situations délicates, et de faciliter le travail des
 techniciens, j'ai mis en place, au cours de l'été 2013, un système qui
-permet l'installation parallèle des machines d'une salle, doublée
-d'une garantie d'uniformité des installations.
+permet l'installation parallèle des machines d'une salle, avec une
+garantie d'uniformité des installations.
 
 Le PXE (Preboot eXecution Environment, en anglais dans le texte) est
 un protocole réseau, voire même un ensemble de protocoles réseaux, qui
