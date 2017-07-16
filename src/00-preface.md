@@ -25,21 +25,30 @@ mitiger les risques de sécurité.
 Ma seconde responsabilité est le support aux personnels de l'UGA[^uga]
 au sein de l'UFR. Je ne mentionnerai pas cette activité dans la suite
 de ce rapport, car elle est peu représentative du niveau technique
-exigé. Je dirai simplement qu'elle m'a apporté une certaine sérénité
-dans la collaboration avec autrui, et une meilleure compréhension des
-besoins informatiques quotidiens de
+exigé pour un diplôme d'ingénieur. Je dirai simplement qu'elle m'a
+apporté une certaine sérénité dans la collaboration avec autrui, et
+une meilleure compréhension des besoins informatiques quotidiens de
 chacun[^daily-needs]. D'expérience, un contact direct avec
 l'utilisateur final est essentiel pour assurer la qualité du service
 rendu (en plus d'être plutôt sympathique, pour être honnête).
 
-Pour en revenir au fait, un ingénieur RICM 
+Un ingénieur RICM doit être faire preuve de proficience dans les
+domaines informatiques liés à l'administration de systèmes
+d'information, et au traitement de l'information. Il doit également
+savoir développer et intégrer des briques logicielles, et être à
+l'aise dans toutes les étapes du cycle de vie d'un projet
+logiciel. Enfin, il est souhaitable qu'il demeure curieux et
+entretienne sa capacité à intégrer de nouvelles compétences à son
+arsenal, en pratiquant ce qu'on appelle parfois l'innovation continue.
+
+Ce rapport se découpera donc en cinq chapitres, correspondant 
 
 [^ricm]: RICM : Réseaux Informatiques et Communication Multimédia
 [^ufrimag]: UFR IM²AG: Unité de Formation et de Recherche en
-  Informatique, Mathématiques et Mathématiques Appliquées de Grenoble
+Informatique, Mathématiques et Mathématiques Appliquées de Grenoble
 [^uga]: UGA: Université Grenoble Alpes, anciennement trois
-  universités, Joseph Fourier (UJF, et mon ancien employeur), Stendhal
-  et Pierre Mendès-France (UPMF).
+universités, Joseph Fourier (UJF, et mon ancien employeur), Stendhal
+et Pierre Mendès-France (UPMF).
 
 [^daily-needs]: étant moi-même utilisateur de Linux, administrateur de
   parc et programmeur dans mes heures perdues, il m'est devenu
