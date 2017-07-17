@@ -116,3 +116,26 @@ d'installation et de configuration de services qui oeuvrent sur le
 réseau, et une capacité d'orchestration de ces services en un ensemble
 harmonieux.
 
+Administration d'une grappe d'hyperviseurs Proxmox
+------------------------------------
+
+À la suite d'une formation à l'administration de la solution de
+virtualisation Proxmox[^proxmox] au début juillet 2015, j'ai entrepris
+de mettre à jour notre parc de serveurs Linux afin de tirer parti des
+fonctionnalités de sauvegarde offertes par Proxmox, et afin
+d'améliorer la visibilité des services que l'UFR propose (répartis sur
+une quarantaine de serveurs virtuels, eux-mêmes répartis sur treize
+serveurs physiques).
+
+Nous utilisions déjà Proxmox auparavant, mais les versions installées
+sur les hyperviseurs étaient tellement différentes qu'il était
+impossible de les faire communiquer entre elles, encore moins de les
+faire travailler de concert. Avant toute mise en grappe, il m'a
+d'abord fallu mettre à niveau notre parc de serveurs.
+
+Malheureusement, certains services que nous hébergeons sont critiques
+à certains utilisateurs, et nous ne pouvons simplement pas les
+interrompre le temps d'une mise à jour[^update]. 
+
+[^update]: mise à jour qui, en cas d'imprévu, peut prendre plusieurs
+heures
