@@ -118,7 +118,7 @@ silencieusement au fil de leur utilisation.
 
 Pour celà, j'ai choisi de représenter les installations comme des
 dépendances d'un paquet "racine" (appelé `im2ag-role` dans le cas de
-l'UFR IM²AG). Le système de paquet garantit que toutes les dépendances
+l'UFR IM$^2$AG). Le système de paquet garantit que toutes les dépendances
 d'un paquet sont installées avant le paquet lui-même. Ainsi, en
 installant la dernière version du paquet racine à intervalles
 réguliers, le gestionnaires de paquet va par la même occasion

@@ -4,14 +4,14 @@
 
 \newpage
 
-Après quatre années passées à l'UFR IM²AG[^ufrimag], engagé comme
+Après quatre années passées à l'UFR IM$^2$AG[^ufrimag], engagé comme
 gestionnaire de parc informatique, et dans l'optique de démarrer
 prochainement une thèse, je souhaite valider les compétences acquises
 au cours de mon travail qui sont équivalentes à celles d'un ingénieur
 RICM[^ricm], ce dont j'espère que vous serez convaincu(e) après avoir
 lu ce rapport.
 
-Mon expérience à l'UFR IM²AG m'a apporté une grande diversité de
+Mon expérience à l'UFR IM$^2$AG m'a apporté une grande diversité de
 situations et de problèmes d'administration intéressants à
 résoudre. En raison de la nature informatique des enseignements qui y
 sont dispensés, les éxigences des utilisateurs sont bien plus précises
@@ -46,7 +46,7 @@ lien entre une de ces qualités et mon activité personnelle et
 professionnelle au cours des quatre dernières années.
 
 [^ricm]: RICM : Réseaux Informatiques et Communication Multimédia
-[^ufrimag]: UFR IM²AG: Unité de Formation et de Recherche en
+[^ufrimag]: UFR IM$^2$AG: Unité de Formation et de Recherche en
 Informatique, Mathématiques et Mathématiques Appliquées de Grenoble
 [^uga]: UGA: Université Grenoble Alpes, anciennement trois
 universités, Joseph Fourier (UJF, et mon ancien employeur), Stendhal

@@ -25,7 +25,7 @@ effet, la procédure manuelle d'installation d'une machine peut
 aisément occuper plusieurs heures, et ne se parallélise pas
 naturellement, en plus d'être affreusement sujette à l'erreur
 humaine. À la main, l'installation d'une salle de 16 machines, comme
-nous en avons une vingtaine à l'UFR IM²AG, peut ainsi prendre une
+nous en avons une vingtaine à l'UFR IM$^2$AG, peut ainsi prendre une
 semaine ou deux, selon le degré d'investissement du technicien.
 
 Ces délais se traduisent directement par une insatisfaction des
