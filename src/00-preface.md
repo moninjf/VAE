@@ -4,6 +4,9 @@
 
 \newpage
 
+\todo[color=red!40]{Plus de détails sur la période précédant le
+travail. Historique. Expliquer les compétences acquises}
+
 Après quatre années passées à l'UFR IM$^2$AG[^ufrimag], engagé comme
 gestionnaire de parc informatique, et dans l'optique de démarrer
 prochainement une thèse, je souhaite valider les compétences acquises

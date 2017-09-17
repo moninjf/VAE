@@ -7,7 +7,10 @@ if Setup.params -package; then
     Pkg.package Pkg.files usr/share/doc/VAE/VAE.pdf=.build/VAE.pdf
 fi
 
-function VAE.build() { mkpdir "$1"; pandoc -s --toc -o "$1" "${@:2}"; }
+function VAE.build() { 
+    mkpdir "$1"
+    pandoc --template="$PWD/src/template.latex" -s --toc -o "$1" "${@:2}"
+ }
 
 # Local Variables:
 # mode: shell-script

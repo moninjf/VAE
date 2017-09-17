@@ -36,6 +36,10 @@ giga-octets du système entier). Idéalement, on aimerait pouvoir
 bénéficier à la fois de l'uniformité des images disques, avec
 l'incrémentalité des installations manuelles.
 
+\todo[color=red!40]{
+        un todo de test
+}
+
 C'est exactement ce problème que les gestionnaires de paquets sont
 conçus pour résoudre. L'installation d'un paquet ne déclenche pas une
 reconfiguration du système entier, mais un paquet peut être mis à jour
