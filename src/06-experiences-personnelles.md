@@ -6,13 +6,15 @@ Expériences personnelles
 Initiation à l'informatique au cours des années de Lycée
 -------------------------------------------
 
-Après une jeunesse passée à pratiquer les mathématiques, je me suis
-intéressé à la programmation à l'âge de 14 ans (en Seconde), en lisant
-le manuel de la calculatrice scientifique requise par le cursus. Le
-sentiment d'émerveillement et d'accomplissement en voyant le programme
-que je venais d'écrire s'éxécuter devant mes yeux m'a encouragé à
-approfondir le sujet (même si le programme en question était
-intégralement copié de l'exemple fourni dans le manuel).
+Après une jeunesse passée à pratiquer les mathématiques
+\todored{expliquer plus en détail le type de mathématiques et le lien
+avec l'info. rebondir sur Knuth}, je me suis intéressé à la
+programmation à l'âge de 14 ans (en Seconde), en lisant le manuel de
+la calculatrice scientifique requise par le cursus. Le sentiment
+d'émerveillement et d'accomplissement en voyant le programme que je
+venais d'écrire s'éxécuter devant mes yeux m'a encouragé à approfondir
+le sujet (même si le programme en question était intégralement copié
+de l'exemple fourni dans le manuel).
 
 J'ai d'abord passé deux ans à apprendre le TI-Basic (le langage de ma
 calculatrice, une espèce d'assembleur de haut niveau) en développant
@@ -147,6 +149,10 @@ exemple :
 
 ### Éviter l'enfer des dépendances pour une compilation sans maux de têtes
 
+\todored{
+  Donner le lien avec les systèmes de paquets de distrib.
+}
+
 La plupart des compilateurs offrent un système de modules afin de
 permettre une compilation séparée de projets complexes, ainsi que le
 partage et la réutilisation de code. En général, il est plutôt
@@ -207,6 +213,8 @@ commande :
           --mount "main B src = source[main B] B.cy" \ 
           --mount "main B C   = source[main B C] C1.cy" \
           ....
+
+C
 
 Ce contexte de compilation peut ensuite être enregistré dans un
 fichier de configuration au format similaire : 

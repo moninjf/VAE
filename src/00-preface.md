@@ -4,7 +4,9 @@
 
 \newpage
 
-\todo[color=red!40]{Plus de détails sur la période précédant le
+\newcommand{\todored}[1]{\todo[color=red]{#1}}
+
+\todored{Plus de détails sur la période précédant le
 travail. Historique. Expliquer les compétences acquises, et leur lien
 avec les compétences RICM pour les expériences tôt
 
