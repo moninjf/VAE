@@ -18,10 +18,10 @@ de l'exemple fourni dans le manuel).
 
 J'ai d'abord passé deux ans à apprendre le TI-Basic (le langage de ma
 calculatrice, une espèce d'assembleur de haut niveau) en développant
-diverses applications, d'un simple solveur d'équations quadratiques à
-un programme de Yam's comprenant une écran de score, une
-reconnaissance de figures, et un bouton d'alibi en plein cours (bouton
-qui alterne entre l'affichage du jeu et un tracé de fonction
+diverses applications simples, d'un simple solveur d'équations
+quadratiques à un programme de Yam's comprenant une écran de score,
+une reconnaissance de figures, et un bouton d'alibi en plein cours
+(bouton qui alterne entre l'affichage du jeu et un tracé de fonction
 aléatoire, censé tromper l'enseignant qui jette un coup d'oeil
 curieux).
 
@@ -31,6 +31,20 @@ nécessitait un PC pour être compilé alors que le TI-Basic était
 éditable directement dans la calculatrice. Lorsque j'ai enfin eu un PC
 (au cours de mon année de Terminale), j'ai appris le C et ai commencé
 un parcours plus classique.
+
+Durant ces explorations lycéennes, je suis allé chercher de la
+littérature complémentaire au rayon "informatique" du CDI. C'est là,
+entre les ouvrages de "HTML/CSS pour les nuls" et "Les bases du C++",
+que j'ai trouvé un humble manuel vert, simplement intitulé "The Art of
+Computer Programming"[^aocp] (c'était, je le crois, le seul ouvrage en
+anglais de ce rayon). Un rapide feuilletage indiqua une profondeur
+intéressante, qui m'incita à l'emprunter pour m'y plonger davantage.
+
+J'ai passé de nombreuses heures depuis ce jour à dévorer cette oeuvre,
+tant elle est fascinante. Aujourd'hui encore, après plus de diw ans,
+je suis certain de pouvoir y trouver de nouvelles inspirations. Son
+approche à la fois formelle et joueuse a parlé très tôt, à la fois à
+mon éducation mathématique, et à ma nature facétieuse.
 
 Au cours de mes années à l'université, mystifié par l'apparente
 "magie" des compilateurs, j'ai entrepris de concevoir divers langages
@@ -100,6 +114,60 @@ ne partage pas de mémoire. Comme les processus sont responsables de la
 mémoire qu'ils partagent avec les autres, ils ont un contrôle total de
 leurs interactions.
 
+### MeXa, un langage de script réactif
+
+En cherchant à rendre Oméga plus interactif, j'ai conçu un langage de
+script capable de représenter la "mécanique" interne d'une application
+dynamique (d'où son nom). Pour celà, il suffit de considérer chaque
+expression comme un "engrenage" qui se lie à d'autres expressions pour
+produire un "torque" (une valeur, paresseusement calculée), à partir
+des torque de ses sous-expressions.
+
+Dans la métaphore mécanique, il est naturel de vouloir remplacer
+certaines pièces de la machinerie, pour en changer le fonctionnement
+ou parce qu'elles sont devenues obsolètes. Avec MeXa, on peut
+remplacer des engrenages en grâce à l'opérateur d'affectation `x = y`.
+
+La particularité de cet opérateur est qu'il s'applique à tous types de
+valeurs, symboliques ou calculées. Pour illustrer, si `f(a)` produit
+l'expression à un certain indice dans le tableau `a`, alors
+l'instruction `f(a) = 3` modifiera le tableau `a` à l'indice en
+question. Conceptuellement, on remplace l'expression calculée `f(a)`
+(qui se trouve être un alias d'une expression dans `a`) par `3`, en
+propageant les changement à tous les endroits où cette expression et
+ses alias ont été référencés.
+
+Du point de vue de l'implémentation, j'ai commencé par envisager de
+représenter chaqye expression comme un "thunk", qui oscille entre deux
+états : défini, et évalué. Dans les langages paresseux traditionnels,
+l'oscillation n'arrive que dans un seul sens, de l'état défini vers
+l'état évalué, par un processus que l'on appelle l'évaluation. Dans
+ces langages, un "thunk" évalué ne peut jamais revenir à son état
+défini.
+
+En MeXa, l'oscillation peut revenir à un état défini en attente
+d'évaluation, lorsqu'une sous-expression est remplacée par exemple. On
+appelle ce processus l'invalidation. Pour permettre celà, chaque
+expression doit garder des références, non seulement vers ses
+sous-expressions au cas où elle serait évaluée, mais également vers
+ses sur-expressions au cas où elle serait invalidée.
+
+Celà engendre un graphe de référence bidirectionnel, ce qui s'avère
+être intéressant du point de vue de la gestion de la mémoire. En
+effet, l'un des problèmes majeurs des algorithmes de ramasse-miette
+est la détection des cycles dans le graphe de références. Dans les
+langages où les références sont mutables, et même avec les algorithmes
+de ramasse-miette générationnels, des cycles savamment placés peuvent
+nécessiter une analyse complète du graphe, ce qui est coûteux (plus
+précisément, celà a un coût linéaire en la taille du graphe, c'est à
+dire un coût croissant selon la taille de l'application).
+
+L'information bidirectionelle permet de détecter les cycles
+dynamiquement formés, dès qu'ils se forment (donc sans délai de
+ramasse-miette), grâce à une analyse locale du graphe de valeurs. En
+échange, ils occupent plus de place en mémoire que des objets
+traditionnelt, ce qui convient à un langage de script.
+
 Alpha : compilateur très bas niveau, impératif, structuré, optimisant
 ----------------------------
 
@@ -109,7 +177,8 @@ algorithme de PGCD en 7 instructions.
 
 Langage non typé, mais structuré. Spécialisé pour travailler sur une
 mémoire linéaire, et capable d'une analyse statique d'interpolation de
-variables par provenance des alias. Les alias proviennent de 
+variables par provenance des alias. Les alias proviennent de "binding"
+entre des symboles et des adresses. 
 
 Problème : un funeste jour, la perte d'un disque dur occasiona la
 perte de 3 mois de travail, et je n'ai pas eu le courage de reprendre
