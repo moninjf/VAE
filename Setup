@@ -1,18 +1,43 @@
 #!/usr/bin/setup -f
+# -*- mode: shell-script; sh-shell: bash -*-
 declare -a sources=( src/*.md )
-prepare .build/VAE.pdf = VAE.build "${sources[@]}"
+prepare .build/VAE.md = VAE.Source "${sources[@]}"
+prepare .build/VAE.md.deps = VAE.Deps .build/VAE.md
+prepare .build/VAE.pdf = VAE.Build -template src/template.latex @.build/VAE.md.deps .build/VAE.md
+prepare-match '\.build/images/(.*)\.jpg' = VAE.Img 'src/$1.g'
 
 if Setup.params -package; then
     Setup.use Pkg
     Pkg.package Pkg.files usr/share/doc/VAE/VAE.pdf=.build/VAE.pdf
 fi
 
-function VAE.build() { 
+function VAE.Deps() {
     mkpdir "$1"
-    pandoc --template="$PWD/src/template.latex" -s --toc -o "$1" "${@:2}"
- }
+    sed -rn 's/\\includegraphics\{(.*)\}/\1/p' "$2" | while read img; do 
+        printf "%s %s\n" -image "$img"
+    done > "$1"
+}
+function VAE.Img() {
+    mkpdir "$1"
+    dot -Tjpg "$2" > "$1"
+}
 
-# Local Variables:
-# mode: shell-script
-# sh-shell: bash
-# End:
+function VAE.Source() {
+    mkpdir "$1"
+    cat "${@:2}" | sed -r 's/^%image "(.*)"/\\includegraphics{.build\/images\/\1.jpg}/' > "$1"
+}
+function VAE.Build() { 
+    local template=
+    local dst="$1"; shift
+    while [ "${1:0:1}" == - ]; do
+        case "$1" in
+            -template) template="$2"; shift;;
+            -image) shift;;
+        esac
+        shift
+    done
+
+    mkpdir "$dst"
+    echo pandoc ${template:+--template="$PWD/$template"} -s --toc -o "$dst" "$@"
+    pandoc --number-sections ${template:+--template="$PWD/$template"} -s --toc -o "$dst" "$@"
+}

@@ -5,7 +5,11 @@
 \newpage
 
 \todo[color=red!40]{Plus de détails sur la période précédant le
-travail. Historique. Expliquer les compétences acquises}
+travail. Historique. Expliquer les compétences acquises, et leur lien
+avec les compétences RICM pour les expériences tôt
+
+Noter l'apprentissage de la dimension sociale de l'ingénieur
+(apprentissage de Git, travail en commun, ...)}.
 
 Après quatre années passées à l'UFR IM$^2$AG[^ufrimag], engagé comme
 gestionnaire de parc informatique, et dans l'optique de démarrer
