@@ -36,12 +36,14 @@ Durant ces explorations lycéennes, je suis allé chercher de la
 littérature complémentaire au rayon "informatique" du CDI. C'est là,
 entre les ouvrages de "HTML/CSS pour les nuls" et "Les bases du C++",
 que j'ai trouvé un humble manuel vert, simplement intitulé "The Art of
-Computer Programming"[^aocp] (c'était, je le crois, le seul ouvrage en
+Computer Programming" [^aocp] (c'était, je le crois, le seul ouvrage en
 anglais de ce rayon). Un rapide feuilletage indiqua une profondeur
 intéressante, qui m'incita à l'emprunter pour m'y plonger davantage.
 
+[^aocp]: The art of computer programming
+
 J'ai passé de nombreuses heures depuis ce jour à dévorer cette oeuvre,
-tant elle est fascinante. Aujourd'hui encore, après plus de diw ans,
+tant elle est fascinante. Aujourd'hui encore, après plus de dix ans,
 je suis certain de pouvoir y trouver de nouvelles inspirations. Son
 approche à la fois formelle et joueuse a parlé très tôt, à la fois à
 mon éducation mathématique, et à ma nature facétieuse.
@@ -50,11 +52,13 @@ Au cours de mes années à l'université, mystifié par l'apparente
 "magie" des compilateurs, j'ai entrepris de concevoir divers langages
 et écosystèmes, plus ou moins aboutis. Pour celà, je me suis aidé de
 l'ouvrage "Compilateurs: principes, techniques et outils" (le
-tristement célèbre "Dragon Book"), puis ai graduellement intégré des
-méthodes nouvelles à mes approches : divers algorithmes de
-ramasse-miette, les piles "spaghetti" qui servent à implémenter les
-continuations du Scheme, qui facilitent la mise en place de tail-call
-optimization (TCO).
+tristement célèbre "Dragon Book" [^dragon] \todored{developper le
+"tristement"} ), puis ai graduellement intégré des méthodes nouvelles
+à mes approches : divers algorithmes de ramasse-miette, les piles
+"spaghetti" qui servent à implémenter les continuations du Scheme, qui
+facilitent la mise en place de tail-call optimization (TCO).
+
+[^dragon]: Le dragon book, difficile pour les débutants.
 
 Après quelques années à travailler pour l'université, j'ai pu apporter
 une dimension réelle à la programmation.
@@ -116,6 +120,7 @@ leurs interactions.
 
 ### MeXa, un langage de script réactif
 
+\todored{tartiner sur le GC, Java, etc.}
 En cherchant à rendre Oméga plus interactif, j'ai conçu un langage de
 script capable de représenter la "mécanique" interne d'une application
 dynamique (d'où son nom). Pour celà, il suffit de considérer chaque
@@ -138,7 +143,7 @@ propageant les changement à tous les endroits où cette expression et
 ses alias ont été référencés.
 
 Du point de vue de l'implémentation, j'ai commencé par envisager de
-représenter chaqye expression comme un "thunk", qui oscille entre deux
+représenter chaque expression comme un "thunk", qui oscille entre deux
 états : défini, et évalué. Dans les langages paresseux traditionnels,
 l'oscillation n'arrive que dans un seul sens, de l'état défini vers
 l'état évalué, par un processus que l'on appelle l'évaluation. Dans
